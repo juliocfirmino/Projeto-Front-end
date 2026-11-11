@@ -1,3 +1,0 @@
-git add .
-git commit -m "Adicionar nova pasta"
-git push origin main
