@@ -1,0 +1,29 @@
+<head>
+    <title>Tabela do Brasileirão</title>
+    <link rel="stylesheet" href="projeto_front_end.css">
+</head>
+<body>
+    <h1>Tabela do Brasileirão</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Time</th>
+                <th>Pontos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Flamengo</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Corinthians</td>
+                <td>70</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
