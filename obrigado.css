@@ -61,7 +61,6 @@ h1 span {
     margin-bottom: 26px;
 }
 
-/* Área do Gerador de Cantos */
 .box_gerador {
     background-color: #f2f5f7;
     border: 1px solid #d9dee4;
@@ -160,7 +159,7 @@ h1 span {
     color: #ffffff;
 }
 
-/* Botão Voltar ao Menu Principal */
+
 .botao_voltar {
     display: inline-block;
     width: 100%;
