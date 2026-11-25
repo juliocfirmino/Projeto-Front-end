@@ -1,20 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
     <head>
+        <meta charset="UTF-8">
         <title>Formulário</title>
         <link rel="stylesheet" href="form_brasileirao.css">
-        <link href="projeto_front_end.html" rel="import">
     </head>
     <body>
+        <!-- Botão Voltar no topo -->
+        <div style="max-width: 500px; margin: 20px auto 10px auto;">
+            <a href="projeto_front_end.html" class="link_voltar" style="text-decoration: none; font-family: Arial, sans-serif; color: #102c54; font-weight: bold; font-size: 0.9rem;">
+                ← Voltar para a Página Principal
+            </a>
+        </div>
+
         <form action="projeto_front_end.html" method="post">
             <div class="estrutura_de_borda">
                 <label for="nome">Nome:</label>
-                    <input type="text" name="nome" required class="estrutura_de_input" placeholder="Digite seu nome"><br>
+                <input type="text" id="nome" name="nome" required class="estrutura_de_input" placeholder="Digite seu nome"><br>
+                
                 <label for="email">Email:</label>
-                    <input type="email" name="email" required class="estrutura_de_input" placeholder="Digite seu email"><br>
+                <input type="email" id="email" name="email" required class="estrutura_de_input" placeholder="Digite seu email"><br>
+                
                 <label for="numero">Número:</label>
-                    <input type="tel" name="numero" required class="estrutura_de_input" placeholder="Digite seu número"><br>
+                <input type="tel" id="numero" name="numero" required class="estrutura_de_input" placeholder="Digite seu número"><br>
+                
                 <label for="idade">Idade:</label>
-                    <input type="date" name="idade" required class="estrutura_de_input"><br>
+                <input type="date" id="idade" name="idade" required class="estrutura_de_input"><br>
 
                 <input type="submit" value="Enviar" class="botao_enviar">
                 <input type="reset" value="Apagar" class="botao_apagar">
