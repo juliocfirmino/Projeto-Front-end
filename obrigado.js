@@ -96,14 +96,14 @@ const btnCopiar = document.getElementById("btn_copiar");
 
 let ultimoCanto = "";
 
-// Função para gerar um canto aleatório do clube selecionado
+
 function gerarCanto() {
     const clube = selectTime.value;
     const lista = cantosPorTime[clube] || cantosPorTime["geral"];
     
     let novoCanto = lista[Math.floor(Math.random() * lista.length)];
     
-    // Evita repetir o mesmo canto seguido se houver mais de uma opção
+   
     if (lista.length > 1 && novoCanto === ultimoCanto) {
         novoCanto = lista[(lista.indexOf(novoCanto) + 1) % lista.length];
     }
@@ -112,28 +112,26 @@ function gerarCanto() {
     textoCanto.textContent = novoCanto;
 }
 
-// Lê os dados enviados pela URL do formulário (nome e time)
+
 window.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const nome = params.get("nome");
     const time = params.get("time");
 
     if (nome && nome.trim() !== "") {
-        // Pega apenas o primeiro nome para deixar a saudação mais natural
         const primeiroNome = nome.trim().split(" ")[0];
         spanNome.textContent = primeiroNome;
     }
 
     if (time && cantosPorTime[time]) {
         selectTime.value = time;
-        gerarCanto(); // Já exibe um canto do time escolhido no formulário
+        gerarCanto(); 
     }
 });
 
-// Evento do botão Gerar Canto
+
 btnGerar.addEventListener("click", gerarCanto);
 
-// Evento do botão Copiar Canto
 btnCopiar.addEventListener("click", () => {
     const texto = textoCanto.textContent;
     navigator.clipboard.writeText(texto).then(() => {
