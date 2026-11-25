@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Confirmado - Brasileirão Série A</title>
+    <link rel="stylesheet" href="obrigado.css">
+</head>
+<body>
+    <div class="container_obrigado">
+        
+        <div class="card_principal">
+            <div class="icone_sucesso">✓</div>
+            <h1>Obrigado, <span id="nome_torcedor">Torcedor</span>!</h1>
+            <p class="mensagem_confirmacao">
+                Seu cadastro foi realizado com sucesso. Em breve você receberá as principais notícias, tabela atualizada e novidades do Brasileirão Série A.
+            </p>
 
+            <!-- Gerador de Canto de Torcida (JavaScript) -->
+            <div class="box_gerador">
+                <h3>📢 Gerador de Canto de Torcida</h3>
+                <p class="subtexto_gerador">Escolha um clube e aqueça a voz para a próxima rodada:</p>
+                
+                <div class="controles_gerador">
+                    <select id="select_time" class="select_clube">
+                        <option value="geral">Brasileirão (Geral)</option>
+                        <option value="athletico-pr">Athletico-PR</option>
+                        <option value="atletico-mg">Atlético-MG</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="botafogo">Botafogo</option>
+                        <option value="bragantino">Bragantino</option>
+                        <option value="chapecoense">Chapecoense</option>
+                        <option value="corinthians">Corinthians</option>
+                        <option value="coritiba">Coritiba</option>
+                        <option value="cruzeiro">Cruzeiro</option>
+                        <option value="flamengo">Flamengo</option>
+                        <option value="fluminense">Fluminense</option>
+                        <option value="gremio">Grêmio</option>
+                        <option value="internacional">Internacional</option>
+                        <option value="mirassol">Mirassol</option>
+                        <option value="palmeiras">Palmeiras</option>
+                        <option value="remo">Remo</option>
+                        <option value="santos">Santos</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="vasco">Vasco</option>
+                        <option value="vitoria">Vitória</option>
+                    </select>
+
+                    <button type="button" id="btn_gerar" class="botao_gerar">Gerar Canto</button>
+                </div>
+
+                <div class="visor_canto">
+                    <p id="texto_canto">"Clique em Gerar Canto para puxar o grito da arquibancada!"</p>
+                </div>
+
+                <button type="button" id="btn_copiar" class="botao_copiar">📋 Copiar canto</button>
+            </div>
+
+            <a href="projeto_front_end.html" class="botao_voltar">
+                ← Voltar para o Menu Principal
+            </a>
+        </div>
+
+    </div>
+
+    <script src="obrigado.js"></script>
+</body>
+</html>
