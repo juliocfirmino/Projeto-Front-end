@@ -2,40 +2,73 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Formulário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Notícias - Brasileirão Série A</title>
         <link rel="stylesheet" href="form_brasileirao.css">
     </head>
     <body>
-        <!-- Este container garante que tudo fique centralizado e empilhado no meio -->
         <div class="container_formulario">
             
-            <!-- Botão Voltar no topo -->
             <a href="projeto_front_end.html" class="link_voltar">
-                ← Voltar para a Página Principal
+                ← Voltar para a página principal
             </a>
 
-            <!-- Formulário -->
             <form action="projeto_front_end.html" method="post">
                 <div class="estrutura_de_borda">
-                    <label for="nome">Nome:</label>
+                    
+                    <div class="cabecalho_form">
+                        <h2>Cadastre-se para receber mais notícias</h2>
+                        <p>Fique por dentro das transferências, tabela atualizada e novidades do Brasileirão Série A.</p>
+                    </div>
+
+                    <label for="nome">Nome completo:</label>
                     <input type="text" id="nome" name="nome" required class="estrutura_de_input" placeholder="Digite seu nome">
                     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required class="estrutura_de_input" placeholder="Digite seu email">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required class="estrutura_de_input" placeholder="seuemail@exemplo.com">
                     
-                    <label for="numero">Número:</label>
-                    <input type="tel" id="numero" name="numero" required class="estrutura_de_input" placeholder="Digite seu número">
+                    <label for="numero">WhatsApp / Número:</label>
+                    <input type="tel" id="numero" name="numero" required class="estrutura_de_input" placeholder="(00) 90000-0000">
                     
-                    <label for="idade">Idade:</label>
+                    <label for="idade">Data de nascimento:</label>
                     <input type="date" id="idade" name="idade" required class="estrutura_de_input">
 
+                    <label for="time">Time do coração (opcional):</label>
+                    <select id="time" name="time" class="estrutura_de_input">
+                        <option value="">Selecione um clube...</option>
+                        <option value="athletico-pr">Athletico-PR</option>
+                        <option value="atletico-mg">Atlético-MG</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="botafogo">Botafogo</option>
+                        <option value="bragantino">Bragantino</option>
+                        <option value="chapecoense">Chapecoense</option>
+                        <option value="corinthians">Corinthians</option>
+                        <option value="coritiba">Coritiba</option>
+                        <option value="cruzeiro">Cruzeiro</option>
+                        <option value="flamengo">Flamengo</option>
+                        <option value="fluminense">Fluminense</option>
+                        <option value="gremio">Grêmio</option>
+                        <option value="internacional">Internacional</option>
+                        <option value="mirassol">Mirassol</option>
+                        <option value="palmeiras">Palmeiras</option>
+                        <option value="remo">Remo</option>
+                        <option value="santos">Santos</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="vasco">Vasco</option>
+                        <option value="vitoria">Vitória</option>
+                    </select>
+
                     <div class="botoes_container">
-                        <input type="submit" value="Enviar" class="botao_enviar">
-                        <input type="reset" value="Apagar" class="botao_apagar">
+                        <input type="submit" value="Cadastrar" class="botao_enviar">
+                        <input type="reset" value="Limpar" class="botao_apagar">
                     </div>
+
+                    <p class="aviso_privacidade">
+                        Ao se cadastrar, você concorda em receber boletins esportivos. Você pode cancelar a inscrição a qualquer momento.
+                    </p>
                 </div>
             </form>
-            
+
         </div>
     </body>
 </html>
