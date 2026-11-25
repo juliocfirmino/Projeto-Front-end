@@ -1,3 +1,6 @@
+/* ==========================================================================
+   RESET & CONFIGURAÇÕES GERAIS (Estilo Brasileirão / TM)
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,29 +9,65 @@
 }
 
 body {
-    background: #102c54;
+    background: #102c54; /* Azul-marinho clássico */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
+
+/* Container do Formulário + Link de Voltar */
+.container_formulario {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==========================================================================
+   LINK DE VOLTAR (ESTILIZADO)
+   ========================================================================== */
+.link_voltar {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s, transform 0.2s;
+    width: fit-content;
+}
+
+.link_voltar:hover {
+    color: #ffd300; /* Amarelo no hover */
+    transform: translateX(-3px); /* Efeito sutil para a esquerda */
+}
+
+/* ==========================================================================
+   ESTRUTURA DO CARD DO FORMULÁRIO
+   ========================================================================== */
 .estrutura_de_borda {
     background-color: #ffffff;
     padding: 35px 40px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 420px;
-    border-top: 6px solid #ffdf00;
+    border-top: 6px solid #ffd300; /* Amarelo de destaque do Brasileirão */
 }
+
+/* ==========================================================================
+   ELEMENTOS DE ENTRADA (LABELS E INPUTS)
+   ========================================================================== */
 label {
     display: block;
     font-weight: 600;
-    color: #002776;
+    color: #102c54; /* Azul-marinho */
     margin-bottom: 6px;
     font-size: 14px;
 }
+
 .estrutura_de_input {
     width: 100%;
     padding: 12px 15px;
@@ -37,14 +76,27 @@ label {
     font-size: 15px;
     color: #333333;
     transition: border-color 0.3s, box-shadow 0.3s;
-    margin-bottom: 5px;
+    margin-bottom: 20px; /* Aumentado para eliminar a necessidade de <br> no HTML */
 }
 
+/* Foco do campo de texto com as cores oficiais */
 .estrutura_de_input:focus {
     outline: none;
-    border-color: #009c3b;
+    border-color: #009c3b; /* Verde brasileirão */
     box-shadow: 0 0 8px rgba(0, 156, 59, 0.25);
 }
+
+/* ==========================================================================
+   BOTÕES DE AÇÃO
+   ========================================================================== */
+/* Container para os botões ficarem lado a lado de forma segura */
+.botoes_container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5px;
+}
+
 .botao_enviar,
 .botao_apagar {
     width: 48%;
@@ -54,21 +106,34 @@ label {
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.3s, transform 0.1s, color 0.3s;
 }
+
+/* Botão Enviar (Verde) */
 .botao_enviar {
     background-color: #009c3b;
     color: #ffffff;
-    margin-right: 2%;
 }
 
 .botao_enviar:hover {
     background-color: #007a2e;
 }
+
+/* Botão Apagar (Cinza para Vermelho) */
 .botao_apagar {
     background-color: #e0e0e0;
     color: #333333;
+}
+
+.botao_apagar:hover {
+    background-color: #d32f2f; /* Vermelho vibrante */
+    color: #ffffff;
+}
+
+/* Feedback de clique em ambos os botões */
+.botao_enviar:active,
+.botao_apagar:active {
+    transform: scale(0.98);
 }
 
 .botao_apagar:hover {
