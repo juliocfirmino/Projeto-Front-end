@@ -1,0 +1,370 @@
+/* ==========================================================================
+   RESET & CONFIGURAÇÕES GERAIS (Estilo Transfermarkt)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #f2f5f7; /* Cinza-azulado claro típico do TM */
+    color: #1a1a1a;
+    line-height: 1.4;
+    padding-bottom: 50px;
+}
+
+/* Container de largura máxima para centralizar o site */
+main, header, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   HEADER (TOPO DO CLUBE)
+   ========================================================================== */
+header {
+    background: linear-gradient(180deg, #102c54 0%, #0c203e 100%); /* Azul-marinho TM */
+    border-bottom: 4px solid #ffd300; /* Linha de destaque em Amarelo */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Header ocupa 100% da tela de ponta a ponta */
+}
+
+.cabecalho-clube {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/* Escudo do Bahia */
+.escudo-clube {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.2s;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+}
+
+.escudo-clube:hover {
+    transform: scale(1.05);
+}
+
+/* Nome do Clube */
+.titulo-principal {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   SEÇÕES & CABEÇALHOS DE TABELAS
+   ========================================================================== */
+section {
+    background-color: #ffffff;
+    border: 1px solid #d9dee4;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cabecalho-secao {
+    border-bottom: 3px solid #102c54;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho-secao h2 {
+    color: #102c54;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 12px;
+}
+
+/* Barrinha amarela à esquerda do título de seção */
+.cabecalho-secao h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 4px;
+    background-color: #ffd300;
+}
+
+/* ==========================================================================
+   TABELAS DE DADOS (Títulos e Resultados)
+   ========================================================================== */
+.tabela-dados {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.tabela-dados th {
+    background-color: #102c54; /* Cabeçalho Azul */
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 2px solid #ffd300;
+}
+
+.tabela-dados td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e9eef2;
+    color: #2c3e50;
+}
+
+/* Zebra Striping (Linhas alternadas) */
+.tabela-dados tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.tabela-dados tbody tr:hover {
+    background-color: #f0f4f8; /* Destaque ao passar o mouse */
+}
+
+/* Badge de quantidade de títulos */
+.quantidade-titulos {
+    background-color: #ffd300; /* Amarelo de destaque */
+    color: #102c54;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Formatações pontuais das tabelas */
+.tabela-dados td strong {
+    color: #102c54;
+}
+
+
+/* ==========================================================================
+   ELENCO PROFISSIONAL (JOGADORES)
+   ========================================================================== */
+.titulo-posicao {
+    background-color: #ebf1f6; /* Cabeçalho de subdivisão cinza no TM */
+    color: #2c405a;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-left: 3px solid #102c54;
+    text-transform: uppercase;
+}
+
+.lista-jogadores {
+    display: grid;
+    /* Subimos ligeiramente o mínimo para dar mais espaço aos cards */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Card Individual de Jogador */
+.cartao-jogador {
+    background-color: #ffffff;
+    border: 1px solid #d9dee4;
+    border-radius: 4px;
+    padding: 12px; /* Aumentado de 10px para dar mais respiro */
+    display: grid;
+    /* Alocação fixa e garantida de 80px para a foto, o restante para o conteúdo */
+    grid-template-columns: 1fr 80px; 
+    grid-template-rows: auto 1fr;
+    gap: 10px; /* Melhor distribuição interna */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    transition: transform 0.15s, border-color 0.15s;
+    
+    /* MODIFICAÇÃO CHAVE: Altura flexível para caber quebras de nome, sem esmagar */
+    min-height: 130px; 
+    height: auto; 
+    overflow: visible; /* Permite expansão natural caso necessário */
+}
+
+.cartao-jogador:hover {
+    transform: translateY(-2px);
+    border-color: #102c54;
+    box-shadow: 0 3px 6px rgba(16,44,84,0.1);
+}
+
+/* Nome e Número do Jogador */
+.cartao-jogador h3 {
+    grid-column: 1 / -1; /* Ocupa a linha inteira no topo */
+    color: #102c54;
+    font-size: 0.95rem;
+    font-weight: 750; /* Um pouco mais pesado para destacar, mas sem estourar o card */
+    border-bottom: 1px solid #e9eef2;
+    padding-bottom: 4px;
+    margin-bottom: 2px;
+    
+    /* REGRAS CHAVE: Sem cortes de texto, permitindo a quebra de linha natural */
+    white-space: normal; 
+    text-overflow: clip; 
+    overflow: visible; 
+    
+    word-wrap: break-word; /* Força quebra de palavras super longas se necessário */
+    line-height: 1.3;
+}
+
+/* Microtabelas de Atributos do Jogador */
+.cartao-jogador table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    align-self: center;
+}
+
+.cartao-jogador th, .cartao-jogador td {
+    padding: 2px 4px 2px 0;
+    text-align: left;
+    border: none;
+}
+
+.cartao-jogador th {
+    color: #7f8c8d;
+    font-weight: normal;
+    width: 45px;
+}
+
+.cartao-jogador td {
+    color: #2c3e50;
+    font-weight: 600;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* Foto do Jogador */
+.foto-jogador {
+    grid-column: 2; /* Fica na direita */
+    grid-row: 2;    /* Alinha ao lado dos atributos */
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Recorta foto sem distorcer */
+    border-radius: 4px; /* Combinando com as bordas do card */
+    border: 1px solid #d9dee4;
+    background-color: #f8f9fa;
+    justify-self: end;
+    align-self: end; /* Fixa no rodapé do card */
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: #102c54;
+    border-top: 4px solid #ffd300;
+    color: #ffffff;
+    padding: 25px 20px;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #b0c4de;
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: #ffd300;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.15s;
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ffd300;
+    border-radius: 3px;
+}
+
+footer a:hover {
+    background-color: #ffd300;
+    color: #102c54;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Mobile e Tablets)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .lista-jogadores {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Melhora o grid em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho-clube {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+    
+    .tabela-dados {
+        display: block;
+        overflow-x: auto; /* Permite rolagem lateral nas tabelas se necessário */
+        white-space: nowrap;
+    }
+}
+
+/* Telas de Celulares - Layout em Lista Inteligente */
+@media (max-width: 480px) {
+    .lista-jogadores {
+        grid-template-columns: 1fr; /* Força 1 coluna em celulares pequenos */
+    }
+
+    .cartao-jogador {
+        padding: 12px; /* Libera o espaço reservado para dar mais tela aos dados */
+        min-height: auto;
+        display: flex;
+        flex-direction: row; /* Coloca os textos à esquerda e a foto à direita de forma fixa */
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    /* Em celulares, o hover de mouse não existe. Por isso, a foto é sempre visível na direita para não prejudicar o usuário móvel */
+    .foto-jogador {
+        position: relative; /* Volta ao fluxo normal do layout */
+        right: auto;
+        bottom: auto;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0; /* Impede a imagem de amassar */
+    }
+
+    .cartao-jogador table {
+        margin-top: 5px;
+    }
+}
