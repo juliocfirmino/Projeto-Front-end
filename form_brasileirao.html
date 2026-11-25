@@ -6,30 +6,36 @@
         <link rel="stylesheet" href="form_brasileirao.css">
     </head>
     <body>
-        <!-- Botão Voltar no topo -->
-        <div style="max-width: 500px; margin: 20px auto 10px auto;">
-            <a href="projeto_front_end.html" class="link_voltar" style="text-decoration: none; font-family: Arial, sans-serif; color: #102c54; font-weight: bold; font-size: 0.9rem;">
+        <!-- Este container garante que tudo fique centralizado e empilhado no meio -->
+        <div class="container_formulario">
+            
+            <!-- Botão Voltar no topo -->
+            <a href="projeto_front_end.html" class="link_voltar">
                 ← Voltar para a Página Principal
             </a>
+
+            <!-- Formulário -->
+            <form action="projeto_front_end.html" method="post">
+                <div class="estrutura_de_borda">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required class="estrutura_de_input" placeholder="Digite seu nome">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required class="estrutura_de_input" placeholder="Digite seu email">
+                    
+                    <label for="numero">Número:</label>
+                    <input type="tel" id="numero" name="numero" required class="estrutura_de_input" placeholder="Digite seu número">
+                    
+                    <label for="idade">Idade:</label>
+                    <input type="date" id="idade" name="idade" required class="estrutura_de_input">
+
+                    <div class="botoes_container">
+                        <input type="submit" value="Enviar" class="botao_enviar">
+                        <input type="reset" value="Apagar" class="botao_apagar">
+                    </div>
+                </div>
+            </form>
+            
         </div>
-
-        <form action="projeto_front_end.html" method="post">
-            <div class="estrutura_de_borda">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required class="estrutura_de_input" placeholder="Digite seu nome"><br>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required class="estrutura_de_input" placeholder="Digite seu email"><br>
-                
-                <label for="numero">Número:</label>
-                <input type="tel" id="numero" name="numero" required class="estrutura_de_input" placeholder="Digite seu número"><br>
-                
-                <label for="idade">Idade:</label>
-                <input type="date" id="idade" name="idade" required class="estrutura_de_input"><br>
-
-                <input type="submit" value="Enviar" class="botao_enviar">
-                <input type="reset" value="Apagar" class="botao_apagar">
-            </div>
-        </form>
     </body>
 </html>
